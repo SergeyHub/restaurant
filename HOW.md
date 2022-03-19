@@ -101,7 +101,7 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
 
 });
 ```
-
+#### 4. Views Admin Index App\View\Components\AdminLayout.php
 #### 2. ContactController Contact Model Table & api route
 `php artisan make:controller ContactController`    
 `php artisan make:model Contact -m`    
