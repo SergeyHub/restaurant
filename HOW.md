@@ -9,7 +9,7 @@
 `git init`  
 `git add .`  
 `git commit –m "Comment"`  
-**`git remote add origin https://github.com/SergeyHub/laravel_crud_api_vue_back.git`**  
+**`git remote add origin https://github.com/SergeyHub/restaurant.git`**  
 `git push -u origin master`  
 
 ##### 1.1 Postgersql
@@ -71,13 +71,37 @@ DB_PASSWORD=123456
 `php artisan breeze:install`  
 `npm install`  
 `npm run dev`  
-**edit users table**
+**`edit users table`**  
 ```
  Schema::create('users', function (Blueprint $table) {
     $table->boolean('is_admin')->default(false);
 ```
 `php artisan migrate`   
- 
+#### 3. Admin Middleware
+`php artisan make:middleware Admin`  
+`php artisan make:controller Admin/AdminController`    
+
+**`Kernel.php`**
+```
+protected $routeMiddleware = [
+    'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+    'admin' => Admin::class
+];
+```
+**`Middleware/Admin.php`**
+```
+if(!auth()->check() || !auth()->user()->is_admin){
+    abort(403);
+}
+```
+**`web.php`**
+```
+Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () {
+    Route::get('/', [AdminController::class, 'index'])->name('index');
+
+});
+```
+
 #### 2. ContactController Contact Model Table & api route
 `php artisan make:controller ContactController`    
 `php artisan make:model Contact -m`    
