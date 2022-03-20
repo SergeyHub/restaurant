@@ -107,3 +107,9 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
 `https://github.com/jan-heise/responsive-navbar-with-dropdown/blob/master/public/sidebar.html`
 
 #### 6. How.md Read.me
+#### 7. Category Menu Table Reservation Models & Tables
+`php artisan make:model Category -m`   
+`php artisan make:model Menu -m`    
+`php artisan make:model Table -m`     
+`php artisan make:model Reservation -m` 
+`php artisan migrate`       
