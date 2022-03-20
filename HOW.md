@@ -102,6 +102,10 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
 });
 ```
 #### 4. Views Admin Index App\View\Components\AdminLayout.php
+
+#### 5. https://www.alpinetoolbox.com/examples/ index.blade admin.blade navigation.blade dashboard.blade
+`https://github.com/jan-heise/responsive-navbar-with-dropdown/blob/master/public/sidebar.html`
+
 #### 2. ContactController Contact Model Table & api route
 `php artisan make:controller ContactController`    
 `php artisan make:model Contact -m`    
