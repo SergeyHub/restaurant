@@ -146,3 +146,22 @@ Category::factory()->count(5)->create();
 ```
 `php artisan db:seed`  
 
+#### 13. Menu Seede Table 
+`npm install -D tailwindcss postcss autoprefixer`  
+`php artisan make:factory MenuFactory`  
+**`MenuFactory.php`**  
+```
+return [
+    'name' => $this->faker->text(15),
+    'description' => $this->faker->text(25),
+    'image' => $this->faker->text(25),
+    'price' => $this->faker->numberBetween($min = 5, $max = 150)
+];
+```
+**`DatabaseSeeder.php`**  
+```
+Menu::factory()->count(25)->create();
+```
+`php artisan db:seed`  
+
+
