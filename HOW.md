@@ -114,3 +114,12 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
 `php artisan make:model Reservation -m` 
 `php artisan migrate`  
 #### 8. Category Menu Table Reservation Models     
+#### 9. Category Menu Table Reservation Controllers
+```
+php artisan make:controller Admin/MenuController --api --resource --model=Menu  
+
+php artisan make:controller Admin/MenuController --resource --model=Menu
+php artisan make:controller Admin/CategoryController --resource --model=Category
+php artisan make:controller Admin/TableController --resource --model=Table
+php artisan make:controller Admin/ReservationController --resource --model=Reservation
+```
