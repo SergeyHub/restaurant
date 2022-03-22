@@ -123,3 +123,19 @@ php artisan make:controller Admin/CategoryController --resource --model=Category
 php artisan make:controller Admin/TableController --resource --model=Table
 php artisan make:controller Admin/ReservationController --resource --model=Reservation
 ```
+#### 12. 
+`php artisan make:factory CategoryFactory`  
+**`CategoryFactory.php`**  
+```
+return [
+    'name' => $this->faker->text(15),
+    'description' => $this->faker->text(25),
+    'image' => $this->faker->text(25),
+];
+```
+**`DatabaseSeeder.php`**  
+```
+Category::factory()->count(5)->create();
+```
+`php artisan db:seed`  
+
