@@ -163,5 +163,6 @@ return [
 Menu::factory()->count(25)->create();
 ```
 `php artisan db:seed`  
+#### 14. Menu View Controller
 
 
