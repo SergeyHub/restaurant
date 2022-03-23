@@ -3,8 +3,13 @@
 `3. php artisan key:generate`  
 `4. npm install`  
 `5. npm run dev`  
-`6 php artisan serve`  
-
+`6 php artisan serve`   
+```
+admin@admin.com  
+12345678   
+test@test.com   
+12345678
+```
 ## Main stages of development
 
 #### 1. Installation Project Template. Create Database
@@ -165,4 +170,15 @@ Menu::factory()->count(25)->create();
 `php artisan db:seed`  
 #### 14. Menu View Controller
 
-
+#### 15. Table Controller Seed Route
+`php artisan make:factory TableFactory`  
+**`TableFactory.php`** 
+```
+return [
+    'name' => $this->faker->text(15),
+    'guest_number' => $this->faker->numberBetween($min = 2, $max = 9),
+    'status' => 'avaliable',
+    'location' => $this->faker->text(15)
+];
+```
+`php artisan db:seed`  
