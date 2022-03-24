@@ -197,3 +197,5 @@ return [
 ```
 `php artisan db:seed`    
 `git push -u origin master`  
+#### 17. Category Controller Create Store Methods  
+php artisan make:request CategoryStoreRequest
