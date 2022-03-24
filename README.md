@@ -182,3 +182,18 @@ return [
 ];
 ```
 `php artisan db:seed`  
+
+#### 16. Reservation Controller Seed Route
+`php artisan make:factory ReservationFactory`  
+```
+return [
+    'first_name' => $this->faker->text(15),
+    'last_name' => $this->faker->text(15),
+    'phone' => $this->faker->numerify('###-###-####'),
+    'res_date' => $this->faker->dateTime(),
+    'table_id' => $this->faker->numberBetween($min = 1, $max = 25),
+    'guest_number' => $this->faker->numberBetween($min = 2, $max = 9),
+];
+```
+`php artisan db:seed`    
+`git push -u origin master`  
