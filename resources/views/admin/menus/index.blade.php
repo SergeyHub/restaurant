@@ -29,11 +29,19 @@
                                 <tr>
                                     <th scope="col"
                                         class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                        No
+                                    </th>
+                                    <th scope="col"
+                                        class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                         Name
                                     </th>
                                     <th scope="col"
                                         class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                         Image
+                                    </th>
+                                    <th scope="col"
+                                        class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                        Description
                                     </th>
                                     <th scope="col"
                                         class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
@@ -49,6 +57,10 @@
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                         <td
                                             class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            {{ $menu->id }}
+                                        </td>
+                                        <td
+                                            class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             {{ $menu->name }}
                                         </td>
                                         <td
@@ -57,7 +69,11 @@
                                         </td>
                                         <td
                                             class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            {{ $menu->price }}&nbsp;<strong>$</strong>
+                                            {{ $menu->description }}
+                                        </td>
+                                        <td
+                                            class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            {{ $menu->price }}
                                         </td>
                                         <td
                                             class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">

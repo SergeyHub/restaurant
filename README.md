@@ -197,5 +197,9 @@ return [
 ```
 `php artisan db:seed`    
 `git push -u origin master`  
-#### 17. Category Controller Create Store Methods  
+#### 17. Category Controller Create Edit Store Methods  
 php artisan make:request CategoryStoreRequest
+#### 18. Menu Controller Create Edit Store Methods  
+php artisan make:request MenuStoreRequest
+php artisan make:migration create_category_menu_table --create "category_menu"
+php artisan migrate
