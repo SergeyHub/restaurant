@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+                <div class="p-1 bg-white border-b border-gray-200">
                     You're logged in! &nbsp;&nbsp;&nbsp;<strong>Admin Categories Views</strong>
                 </div>
             </div>
@@ -28,6 +28,10 @@
                             <table class="min-w-full">
                                 <thead class="bg-gray-50 dark:bg-gray-700">
                                 <tr>
+                                    <th scope="col"
+                                        class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                        No
+                                    </th>
                                     <th scope="col"
                                         class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                         Name
@@ -50,15 +54,18 @@
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                         <td
                                             class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            {{ $category->id }}
+                                        </td>
+                                        <td
+                                            class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             {{ $category->name }}
                                         </td>
                                         <td
                                             class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            <img src="{{ Storage::url($category->image) }}"
-                                                 class="w-16 h-16 rounded">
+                                            <img src="{{ Storage::url($category->image) }}" class="w-16 h-16 rounded">
                                         </td>
                                         <td
-                                            class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-wrap dark:text-white">
                                             {{ $category->description }}
                                         </td>
                                         <td

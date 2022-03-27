@@ -29,6 +29,10 @@
                                 <tr>
                                     <th scope="col"
                                         class="py-3 px-6 text-xs font-strong tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                        No
+                                    </th>
+                                    <th scope="col"
+                                        class="py-3 px-6 text-xs font-strong tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                         Name
                                     </th>
                                     <th scope="col"
@@ -51,6 +55,10 @@
                                 <tbody>
                                 @foreach ($tables as $table)
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <td
+                                            class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            {{ $table->id }}
+                                        </td>
                                         <td
                                             class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             {{ $table->name }}
